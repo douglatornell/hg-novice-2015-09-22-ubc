@@ -79,6 +79,8 @@ but the workflow that they encourage.
 
 ## Other Resources
 
+*   [Mercurial Command Reminders](commands.html)
+
 *   [Reference](reference.html)
 *   [Discussion](discussion.html)
 *   [Instructor's Guide](instructors.html)

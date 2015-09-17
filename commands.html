@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc">
+    <title>Software Carpentry: Version Control with Mercurial</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/swc.css" />
+    <link rel="alternate" type="application/rss+xml" title="Software Carpentry Blog" href="http://software-carpentry.org/feed.xml"/>
+    <meta charset="UTF-8" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="lesson">
+    <div class="container card">
+      <div class="banner">
+        <a href="http://software-carpentry.org" title="Software Carpentry">
+          <img alt="Software Carpentry banner" src="img/software-carpentry-banner.png" />
+        </a>
+      </div>
+      <article>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+                    <a href="index.html"><h1 class="title">Version Control with Mercurial</h1></a>
+          <h2 class="subtitle">Mercurial Command Reminders</h2>
+          <p>Edit your user configuration:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> config --edit</code></pre>
+<p>Display help text for a Mercurial command:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> help command_name</code></pre>
+<p>Initialize the current working directory as a repository:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> init</code></pre>
+<p>Display the status of the repository:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> status</code></pre>
+<p>Mark specific files to be tracked in the repository:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> add filename_1 filename_2</code></pre>
+<p>Mark specific directories to be tracked in the repository:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> add directory_1 directory_2</code></pre>
+<p>Mark all untracked files and directories to be tracked in the repository:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> add</code></pre>
+<p>Stop tracking a specific file:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> forget filename</code></pre>
+<p>Commit changes in all modified files to the repository’s history: (Without <code>-m</code> and a message, this command runs a text editor.)</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> commit -m <span class="st">&quot;Some message&quot;</span></code></pre>
+<p>Commit changes in specific modified files to the repository’s history: (Without <code>-m</code> and a message, this command runs a text editor.)</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> commit filename_1 filename_2 -m <span class="st">&quot;Some message&quot;</span></code></pre>
+<p>View the history of the repository:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> log</code></pre>
+<p>Display differences between the current state of the repository and the last saved state:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> diff</code></pre>
+<p>Display differences between the current state of a specific file and the last saved state:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> diff path/to/file</code></pre>
+<p>Display differences between the current state of a specific file and its state in a specific earlier revision:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> diff --rev 27 path/to/file</code></pre>
+<p>Display changes made to a specific file in a specific earlier revision:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> diff --change 24 path/to/file</code></pre>
+<p>Erase changes to a specific file since the last commit (modified file is saved with a <code>.orig</code> suffix before reverting):</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> revert path/to/file</code></pre>
+<p>Erase changes to a specific file since the last commit without saving <code>.orig</code> backup:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> revert --no-backup path/to/file</code></pre>
+<p>Erase all changes since the last commit:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> revert --all</code></pre>
+<p>Restore file to its state in a previous revision:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> revert --rev 16 path/to/file</code></pre>
+<p>To add the URL of a clone of a repository on Bitbucket, use</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> config --local</code></pre>
+<p>to edit (or create) the <code>.hg/hgrc</code> in the repository to include:</p>
+<pre class="output"><code>[paths]
+default = URL</code></pre>
+<p>To add the path of a local clone of a repository, use</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> config --local</code></pre>
+<p>to edit (or create) the <code>.hg/hgrc</code> in the repository to include:</p>
+<pre class="output"><code>[paths]
+nickname = path/to/repository</code></pre>
+<p>Display a repository’s clone URLs and/or paths:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> paths</code></pre>
+<p>Push changes from a local repository to a (default) Bitbucket clone of the repository:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> push</code></pre>
+<p>Pull changes from a (default) Bitbucket clone of the repository:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> pull</code></pre>
+<p>Pull changes from a local clone of the repository:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> pull /path/to/repository</code></pre>
+<p>Pull changes from a local clone of the repository that you have added a nickname path for:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> pull nickname</code></pre>
+<p>Update a repository with the changes pulled from a clone of the repository:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> update</code></pre>
+<p>Merge changes pulled from another clone of the repository using the GUI <code>kdiff3</code> to view and resolve conflicts:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> merge --tool=kdiff3</code></pre>
+<p>Clone a repository from Bitbucket:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> clone URL</code></pre>
+<p>Clone a repository from a local path:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hg</span> clone path/to/repository</code></pre>
+<p>Note that when you clone a repository, either by a URL or by a path, the URL/path of the source repository is automatically added to the <code>[paths]</code> section of the new repository’s <code>.hg/hgrc</code> file as the <code>default</code> path so that <code>hg push</code> and <code>hg pull</code> just work.</p>
+        </div>
+      </div>
+      </article>
+      <div class="footer">
+        <a class="label swc-blue-bg" href="http://software-carpentry.org">Software Carpentry</a>
+        <a class="label swc-blue-bg" href="https://github.com/swcarpentry/hg-novice">Source</a>
+        <a class="label swc-blue-bg" href="mailto:admin@software-carpentry.org">Contact</a>
+        <a class="label swc-blue-bg" href="LICENSE.html">License</a>
+      </div>
+    </div>
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+    <script src="http://software-carpentry.org/v5/js/jquery-1.9.1.min.js"></script>
+    <script src="css/bootstrap/bootstrap-js/bootstrap.js"></script>
+  </body>
+</html>
