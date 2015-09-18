@@ -77,11 +77,18 @@ but the workflow that they encourage.
 11. [Collaboration](11-collaboration.html)
 12. [Merging Changes from Different Clones](12-merges.html)
 13. [Merge Conflicts](13-conflicts.html)
-14. [Open Science](14-open.html)
-15. [Licensing](15-licensing.html)
-16. [Hosting](16-hosting.html)
 
 ## Other Resources
+
+*   [Version Control with Mercurial Slide-deck](hg_notes.pdf)
+
+*   [Mercurial Web Site](https://mercurial.selenic.com/)
+*   [Mercurial: The Definitive Guide](http://hgbook.red-bean.com/) (also known as "The Red-bean Book")
+*   [Mercurial Command Reminders](commands.html)
+
+*   [Open Science](14-open.html)
+*   [Licensing](15-licensing.html)
+*   [Hosting](16-hosting.html)
 
 *   [Reference](reference.html)
 *   [Discussion](discussion.html)
