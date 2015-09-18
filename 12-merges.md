@@ -305,38 +305,38 @@ $ hg log -G
 |\   tag:         tip
 | |  parent:      4:e0747e3feea1
 | |  parent:      5:ce4056d28038
-| |  user:        Doug Latornell <djl@douglatornell.ca>
+| |  user:        Susan Allen <sallen@eos.ubc.ca>
 | |  date:        Sun Jun 14 13:52:57 2015 -0700
 | |  summary:     Merge changes from home.
 | |
 | o  changeset:   5:ce4056d28038
 | |  parent:      3:68fd235a0541
-| |  user:        Doug Latornell <djl@douglatornell.ca>
+| |  user:        Susan Allen <sallen@eos.ubc.ca>
 | |  date:        Sun Jun 14 13:07:22 2015 -0700
 | |  summary:     Add a line in our home clone.
 | |
 o |  changeset:   4:e0747e3feea1
-|/   user:        Doug Latornell <djl@douglatornell.ca>
+|/   user:        Susan Allen <sallen@eos.ubc.ca>
 |    date:        Sun Jun 14 13:16:14 2015 -0700
 |    summary:     Change a line in the work clone.
 |
 o  changeset:   3:68fd235a0541
-|  user:        Doug Latornell <djl@douglatornell.ca>
+|  user:        Susan Allen <sallen@eos.ubc.ca>
 |  date:        Sun Jun 14 11:04:44 2015 -0700
 |  summary:     Start creating bibliography for the forecast paper.
 |
 o  changeset:   2:d14b5f2372fc
-|  user:        Doug Latornell <djl@douglatornell.ca>
+|  user:        Susan Allen <sallen@eos.ubc.ca>
 |  date:        Sun Jun 14 11:03:17 2015 -0700
 |  summary:     Add note about data source for Fraser River flow forcing.
 |
 o  changeset:   1:41b3e1218ad2
-|  user:        Doug Latornell <djl@douglatornell.ca>
+|  user:        Susan Allen <sallen@eos.ubc.ca>
 |  date:        Sun Jun 14 11:02:05 2015 -0700
 |  summary:     Add note about source for atmospheric forcing.
 |
 o  changeset:   0:983898576cad
-   user:        Doug Latornell <djl@douglatornell.ca>
+   user:        Susan Allen <sallen@eos.ubc.ca>
    date:        Sun Jun 14 11:00:20 2015 -0700
    summary:     Starting to plan the daily NEMO forecast system.
 
