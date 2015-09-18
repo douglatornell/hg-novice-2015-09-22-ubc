@@ -82,6 +82,12 @@ but the workflow that they encourage.
 
 ## Other Resources
 
+*   [Version Control with Mercurial Slide-deck](hg_notes.pdf)
+
+*   [Mercurial Web Site](https://mercurial.selenic.com/)
+*   [Mercurial: The Definitive Guide](http://hgbook.red-bean.com/) (also known as "The Red-bean Book")
+*   [Mercurial Command Reminders](commands.html)
+
 *   [Reference](reference.html)
 *   [Discussion](discussion.html)
 *   [Instructor's Guide](instructors.html)
