@@ -2,8 +2,8 @@
 
 \usetheme{boxes}
 
- 
-\usecolortheme[RGB={34,170,34}]{structure} 
+
+\usecolortheme[RGB={34,170,34}]{structure}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphics}
@@ -40,7 +40,7 @@
 
 \section*{Mercurial (hg)}
 
-\begin{frame}[plain] 
+\begin{frame}[plain]
 \titlepage
 \end{frame}
 
@@ -94,7 +94,7 @@
 %\end{enumerate}
 %\end{block}
 
-\texttt{\$ EDITOR=nano hg config --edit} 
+\texttt{\$ EDITOR=nano hg config --edit}
 
 \begin{verbatim}
 [ui]
@@ -260,68 +260,141 @@ inprogress/
 
 \againframe{ignore}
 
-\begin{frame}[label=Collaborating]
-\frametitle{Collaborating}
-\begin{enumerate}
-  \item Explain what remote repositories are and why they are useful.
-  \item Explain what happens when a remote repository is cloned.
-  \item Explain what happens when changes are pushed to or pulled from a remote repository.
-\end{enumerate}
-\begin{multicols}{2}
-\begin{itemize}
-  \item hg paths
-  \item hg push
-  \item hg pull
-  \item hg clone
-  \item hg log \dh graph
-  \item hg update
-\end{itemize}
-\end{multicols}
-\end{frame}
 
-
-\begin{frame}[fragile]
-We're going to explore collaborating via a remote repository clone on Bitbucket by pretending that we are going back and forth between our home and work computers.
-We'll simulate that by creating a directory for each location and moving our {\tt planets/} repository into the work computer directory.
-\begin{verbatim}
-$ cd
-$ cd Desktop/swc/
-$ mkdir home-pc work-pc
-$ mv planets/ work-pc/
-\end{verbatim}
-These could just as easily be directories on our own and our supervisor's computer,
-or on the computers of a group of collaborators spread around the world.
-\end{frame}
-
-
-\againframe{Collaborating}
-
-
-\begin{frame}
-\frametitle{Conflicts and Merging}
-\begin{enumerate}
-  \item Explain what conflicts are and when they can occur.
-  \item Resolve conflicts resulting from a merge.
-\end{enumerate}
-\begin{multicols}{2}
-\begin{itemize}
-  \item hg heads
-  \item hg log -G
-  \item hg merge \dh tool=kdiff3
-  \item hg summary
-\end{itemize}
-\end{multicols}
+\begin{frame}[label=remote-repos]
+  \frametitle{Remote Repositories}
+  \begin{block}{Learning Goals}
+    \begin{enumerate}
+      \item Explain what remote repositories are and why they are useful.
+      \item Explain what happens when a remote repository is cloned.
+      \item Explain what happens when changes are pushed to or pulled from a remote repository.
+    \end{enumerate}
+  \end{block}
+  \begin{block}{Lesson Commands}
+    \begin{itemize}
+      \item hg push
+      \item hg config --local
+      \item hg paths
+      \item hg pull
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Open Science}
-\begin{enumerate}
-  \item Explain how the GNU Public License (GPL) differs from most other open licenses.
-  \item Explain the four kinds of restrictions that can be combined in a Creative Commons license.
-  \item Correctly add licensing and citation information to a project repository.
-  \item Outline options for hosting code and data and the pros and cons of each.
-\end{enumerate}
+  \frametitle{Remote Repositories}
+  \begin{block}{Local and Bitbucket Repos After 1st Push}
+    \includegraphics[scale=0.55]{fig/bitbucket-repo-after-first-push.png}
+  \end{block}
+\end{frame}
+
+
+\againframe{remote-repos}
+
+
+\begin{frame}[label=clones]
+  \frametitle{Working with Clone Repositories}
+  \begin{block}{Learning Goals}
+    \begin{enumerate}
+      \item Explain how to push, pull, update files, and update metadata among clones of a repository.
+      \item Display a simple visualization of the state of a repository and explain how updating the repository affects its state.
+    \end{enumerate}
+  \end{block}
+  \begin{block}{Lesson Commands}
+    \begin{itemize}
+      \item hg clone
+      \item hg add
+      \item hg commit
+      \item hg push
+      \item hg pull
+      \item hg log \dh graph
+      \item hg update
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Working with Clone Repositories}
+  \begin{block}{After Creating work and home Clones}
+    \includegraphics[scale=0.40]{fig/hg-after-home-work-clones.png}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Working with Clone Repositories}
+  \begin{block}{After Pushing Change from work Clone}
+    \includegraphics[scale=0.40]{fig/hg-after-change-to-work-clone.png}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Working with Clone Repositories}
+  \begin{block}{After Pulling Change into home Clone}
+    \includegraphics[scale=0.40]{fig/hg-after-pulling-to-home-clone.png}
+  \end{block}
+\end{frame}
+
+
+\againframe{clones}
+
+
+\begin{frame}
+  \frametitle{Collaboration}
+  \begin{block}{Learning Goals}
+    \begin{enumerate}
+    \item Explain the differences between public and private repositories on Bitbucket.
+    \item Configure user and group access settings for Bitbucket repositories.
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}[label=merging]
+  \frametitle{Merging Changes from Different Clones}
+  \begin{block}{Learning Goals}
+    \begin{enumerate}
+    \item Explain how Mercurial handles changes that make a repository's history diverge.
+    \item Explain what merges are.
+    \end{enumerate}
+  \end{block}
+  \begin{block}{Lesson Commands}
+    \begin{multicols}{2}
+      \begin{itemize}
+        \item hg commit
+        \item hg push
+        \item hg pull
+        \item hg heads
+        \item hg log -G
+        \item hg merge
+        \item hg status
+        \item hg diff
+        \item hg summary
+      \end{itemize}
+    \end{multicols}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}[label=merge-conflicts]
+  \frametitle{Merge Conflicts}
+  \begin{block}{Learning Goals}
+    \begin{enumerate}
+    \item Explain what merge conflicts are and when they can occur.
+    \item Resolve conflicts resulting from a merge using the KDiff3 tool.
+    \end{enumerate}
+  \end{block}
+  \begin{block}{Lesson Commands}
+    \begin{itemize}
+      \item hg incoming
+      \item hg pull
+      \item hg update
+      \item hg log \dh graph
+      \item hg merge \dh tool=kdiff3
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 \end{document}
