@@ -8,3 +8,10 @@ CONDUCT.html
 *.pyc
 _site
 .DS_Store
+hg_notes.aux
+hg_notes.log
+hg_notes.nav
+hg_notes.out
+hg_notes.snm
+hg_notes.toc
+hg_notes.vrb
