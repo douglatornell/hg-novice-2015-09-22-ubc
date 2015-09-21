@@ -77,7 +77,7 @@ added 1 changesets with 1 changes to 1 files</code></pre>
 <p>Note that we didn’t have to create a remote path called <code>default</code>; Mercurial did that automatically when we cloned the repository from Bitbucket.</p>
 <p>Our three repositories now look like this:</p>
 <div class="figure">
-<img src="fig/hg-after-change-to-work-clone.svg" alt="After Pushing Change from work Repository" /><p class="caption">After Pushing Change from <code>work</code> Repository</p>
+<img src="fig/hg-after-change-to-work-clone.svg" alt="After Pushing Change from work Clone" /><p class="caption">After Pushing Change from <code>work</code> Clone</p>
 </div>
 <p>We can now download the change into our <code>home</code> repository:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">cd</span> ~/Desktop/home/
@@ -121,7 +121,7 @@ o  changeset:   0:983898576cad
 <p>You can use <code>hg log --graph</code> again to see that the <code>@</code> has been moved to changeset 3 which tells us that our working copy is up to date.</p>
 <p>Here is what our two local repositories and our Bitbucket repository look like now, showing how the <code>biblio.txt</code> file has been copied from Bitbucket to our <code>home</code> repository clone:</p>
 <div class="figure">
-<img src="fig/hg-after-pulling-to-home-clone.svg" alt="After Pulling Change to home Repository" /><p class="caption">After Pulling Change to ‘home’ Repository</p>
+<img src="fig/hg-after-pulling-to-home-clone.svg" alt="After Pulling Change into home Clone" /><p class="caption">After Pulling Change into <code>home</code> Clone</p>
 </div>
 <p>Generally, we are unlikely to have multiple copies of the same remote repository on our laptop at once. Instead, one of those copies would be on our laptop, and the other on a lab workstation (for example). Pushing and pulling changes gives us a reliable way to share work between different machines, and, as we will see shortly, different people.</p>
         </div>

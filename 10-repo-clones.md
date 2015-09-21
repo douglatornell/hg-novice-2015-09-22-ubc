@@ -90,7 +90,7 @@ Mercurial did that automatically when we cloned the repository from Bitbucket.
 
 Our three repositories now look like this:
 
-![After Pushing Change from `work` Repository](fig/hg-after-change-to-work-clone.svg)
+![After Pushing Change from `work` Clone](fig/hg-after-change-to-work-clone.svg)
 
 We can now download the change into our `home` repository:
 
@@ -155,7 +155,7 @@ You can use `hg log --graph` again to see that the `@` has been moved to changes
 Here is what our two local repositories and our Bitbucket repository look like now,
 showing how the `biblio.txt` file has been copied from Bitbucket to our `home` repository clone:
 
-![After Pulling Change to 'home' Repository](fig/hg-after-pulling-to-home-clone.svg)
+![After Pulling Change into `home` Clone](fig/hg-after-pulling-to-home-clone.svg)
 
 Generally,
 we are unlikely to have multiple copies of the same remote repository on our laptop at once.
